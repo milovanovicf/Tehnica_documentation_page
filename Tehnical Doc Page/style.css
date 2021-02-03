@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+body {
+    font-family: poppins, monospace, sans-serif;
+    font-size: 90%;
+}
+div.main-body {
+    display: grid;
+    grid-template-columns: minmax(300px, auto) 1fr;
+    grid-template-areas: "navbar mainContent";
+    grid-gap: 20px;
+}
+nav#navbar {
+    grid-area: navbar;
+    position: fixed;
+}   
+nav#navbar a {
+    display:block;
+    border: 1px solid lightgray;
+    padding: 5px;
+    margin: 10px 0px;
+    text-decoration: none;
+}
+nav header {
+    font-size: 20px;
+    font-weight: bold;
+}
+main#main-doc {
+    grid-area: mainContent;
+}
+section header {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 10px 0px;
+}
+section h2 {
+    font-size: 20px;
+}
+section code {
+    display:block;
+    border: 1px solid lightgray;
+    padding: 20px;
+    margin: 10px;
+    background-color: lightgray;
+    width: 50%;
+}
+a:link {
+    color: black;
+    background-color: lightgray;
+  }
+  a:visited {
+    color: black;
+    background-color: lightgray;
+  }
+  a:hover {
+    color: white;
+    cursor: pointer;
+    background-color: gray;
+    border: 1px solid gray;
+
+  }
+  a:active {
+    color: black;
+  }
+  @media screen and (max-width: 750px) {
+      div.main-body {
+          grid-template-columns: 1fr;
+          grid-template-areas: "navbar" "mainContent"
+      }
+
+     nav#navbar {
+         position: inherit;
+     } 
+  }
